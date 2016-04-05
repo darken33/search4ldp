@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2001-06-22 00:15-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: src/interface.c:41
+msgid "HOWTOs"
+msgstr ""
+
+#: src/interface.c:48
+msgid "Elément à rechercher"
+msgstr ""
+
+#: src/interface.c:79
+msgid "  Rechercher:  "
+msgstr ""
+
+#: src/interface.c:92 src/interface.c:104
+msgid "Un des mots"
+msgstr ""
+
+#: src/interface.c:93
+msgid "Tous les mots"
+msgstr ""
+
+#: src/interface.c:94
+msgid "La phrase"
+msgstr ""
+
+#: src/interface.c:175
+msgid "Copyright (c) 2001 - Philippe BOUSQUET"
+msgstr ""
+
+#: src/interface.c:177
+msgid "Logiciel distribué sous la licence GNU GENERAL PUBLIC LICENSE"
+msgstr ""
+
+#: src/support.c:100 src/support.c:138
+#, c-format
+msgid "Couldn't find pixmap file: %s"
+msgstr ""
+
+#: src/support.c:116
+#, c-format
+msgid "Couldn't create pixmap from file: %s"
+msgstr ""

@@ -1,0 +1,118 @@
+Titre       : Search4LDP
+Version     : 0.5
+Description : Moteur de recherche pour le LDP
+Auteur      : Philippe BOUSQUET
+Creation    : 10/03/2001
+Modification: 03/09/2001
+License     : GNU GENERAL PUBLIC LICENSE
+Copyright   : (c) 2001 - Philippe BOUSQUET
+_________________________________________________________________
+
+PRESENTATION
+============
+	Seach4LDP est un moteur de recherche par collecte pour
+	le LDP (Linux Documentation Project).
+	Il recherche une chaîne de caractère dans l'ensemble des
+	pages contenus dans les repertoires donnés en paramètre.
+	La liste des pages trouvées est	formatée en page HTML.
+
+INSTALLATION
+============
+      Pour cette phase vous devez etre connecté en tant que root
+
+	Pour installer
+	  $ ./install-it 
+        
+	Pour executer le logiciel:
+	  $ howto
+
+   NOTA: 
+	Search4LDP va etre installé sous /usr/local/share/search4LDP
+	mais vous pouvez le paramétrer (VIVEMENT DECONSEILLE).
+	Howto utilise un navigateur (par défault mozilla) cependant
+	cela peut aussi etre paramétré.
+      Pour le paramétrage editez le fichier install-it et modifiez
+	l'une des deux zones prefix et navigateur
+
+PERFORMANCES
+============
+	Si vous utilisez la recherche rapide (par défaut), les
+	performences sont trés bonnes.
+
+	Par contre si vous ne l'utilsez pas les temps de
+	réponses sont tres long (comptez 2 à 3 minutes). 
+	Aussi, il vaut mieux ne faire des recherches complètes
+	que si vous ne trouvez pas avec une recherche rapide.
+	
+   NOTA: 
+	Dans les prochaines versions un base d'indexation devrait etre 
+	mise ne place afin d'accelerer les recherches (complètes) qui 
+	auraient déja été effectuées.
+
+SCRIPT CGI
+==========
+	Le script search4ldp.pl est un script CGI, il peut donc
+	etre intégré dans un formulaire de recheche HTML.
+	Pour cela editez search4ldp.pl et activez la ligne:
+        print "Content-type: text/html\n\n"
+	
+	search4ldp.pl accepte les paramètres suivants:
+      1) paramètres spécifique à la recherche 
+	- Texte="chaine à rechercher" ex: Texte="carte son"
+	- Base="liste de répertoires" ex: Base=/usr/doc/HTML:/usr/doc/HOWTO
+	- Operateur="OU" pour rechercher un des mots de Texte
+	  Operateur="ET" pour rechercher tous les mots de Texte	
+	  Operateur="PHRASE" pour rechercher Texte
+	- Rapide="Oui" pour effectuer une recherche rapide.
+	  Rapide="Non" pour effectuer une recherche complète (déconseillée)
+      - NbMax=arreter la recherche lorsque NbMax pages sont trouvées 
+      2) paramètres pour le serveur appache
+      - AliasSRC=chemin à remplacer
+      - AliasDST=chemin de remplacement
+      3) paramètres de formatage de la page résultat 
+      - DocTitre=titre de la page résultat
+      - Titre=titre à afficher sur la page résultat
+      - ClTitre=Couleur du titre
+      - ClBack=couleur du fond de page
+      - ClText=couleur du texte
+      - ClBaniere=couleur de la baniere
+      - ClBText=couleur du texte dans la baniere
+      - Link=couleur des liens
+      - VLink=couleur des liens visités
+
+      Exemple: Veuillez vous reporter à la note CGI/ReadmeCGI 
+
+NOUVEAUTES
+==========
+	Pour avoir la liste des nouveautés veuillez vous reporter à la note NEWS.
+
+A FAIRE
+=======
+	Pour avoir la liste du reste à faire veuillez vous reporter à la note TODO.
+
+BUGS
+====
+	Pour avoir la liste des bugs veuillez vous reporter à la note BUGS.
+
+GARANTIES
+=========
+	ATTENTION: Je ne prend aucune responsabilité sur les dégats
+	encourus lors de l'utilisation de ce logiciel.
+
+LICENSE
+=======
+	Ce logiciel est sous license GPL, Pour plus d'informations
+	consulter la note COPYING.
+
+AUTRES PROJETS
+==============
+	Search4LDP n'est pas mon seul projet, pour en savoir plus
+	veuillez vours reporter à la note PROJETS, ou consulter
+	le site http://darken.tuxfamily.org.
+_________________________________________________________________
+
+Philippe BOUSQUET
+229 rue Sainte Catherine,
+33000 BORDEAUX
+FRANCE.
+Tel: (+33) 06.61.99.25.84

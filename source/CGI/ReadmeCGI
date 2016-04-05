@@ -1,0 +1,57 @@
+EXEMPLE D'UTILISATION DE SEARCH4LDP EN INTRANET
+_________________________________________________________________
+
+INTRODUCTION
+============
+	J'ai installé Seach4LDP dans mon intranet "localhost.localdomain"
+      pour effectuer des recherches sur les HOWTOs Linux.
+
+ARBORESCENCE
+============
+      Arboressence de localhost.localdomain
+      (/)               ==> repertoire /var/www/html
+       |
+       +--> HOWTO       ==> repertoire /var/www/html/HOWTO (lien sur /usr/share/doc/HOWTO)
+              |
+              +--> HTML/search.html ==> le formulaire de recherche pour Search4LDP 
+       
+      Répertoire pour les fichiers perl:
+      /var/www/perl  ==> c'est dans ce repertoire que ce trouve search4ldp.pl (script CGI)  
+
+LE FORMULAIRE
+=============
+	Etudions le formulaire que j'ai créé pour faire une recherche via Search4LDP:
+
+      1)Le formulaire est composé de deux champs saisissable:
+      Texte     : le texte à rechercher
+      Operateur : la methode de recherche (ET/OU/PHRASE)
+       
+      2) Il se compose ensuite de champs non saisissable qui permettent de paramètre la recherche:
+      Rapide="Oui" : on ne fait que des recherche rapide
+      Base="/var/www/html/HOWTO" : c'est le chemin réel de la recherche
+      AliasSrc="/var/www/html" et AliasDest="" : Search4LDP va supprimer la chaine /var/www/html
+                                                 du chemin des fichiers pour que le serveur 
+                                                 Appache les retrouve (en effet pour Appache 
+                                                 /var/www/html est le répertoire racine /)
+      
+      3) Les autres champs fixes servent a fomater la page résultat
+      Titre="Search4LDP"  : Titre de la page résultat 
+      Link="#AA55AA"      : Couleur des liens
+      VLink="#CC77CC"     : Couleur des liens déja visités
+      ClBack="#FFFFFF"    : Couleur du fond 
+      ClText="#000000"    : Couleur du texte
+      ClBaniere="#FF0000" : Couleur de la banière
+      ClBText="#FFFFFF"   : Couleur du texte dans la baniere
+      NbMax=0             : Pas de limitation du nombre de fichiers à ramener
+
+ATTENTION
+=========
+	Search4LDP utilise find.pl: Assurez vous qu'il est dispnible sur votre serveur
+      avant de l'utiliser
+_________________________________________________________________
+
+Philippe BOUSQUET
+229 rue Sainte Catherine,
+33000 BORDEAUX
+FRANCE.
+Tel: (+33) 06.61.99.25.84

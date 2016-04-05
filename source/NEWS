@@ -1,0 +1,43 @@
+EVOLUTIONS APPORTES 
+_________________________________________________________________ 
+
+V0.1 
+====
+   - Premiere version de Search4LDP
+
+V0.2 
+====
+   - Paramétrage du répertoire de Recherche
+   - Trier la liste résultat par ordre d'importances
+   - Afficher le titre de la page au lieu du nom
+
+V0.3
+====
+   - Correction des bugs de la v0.2 (Titre de la page)
+   - Permettre les recherches avances (Operation booleennes)
+   - Gestion d'une base de référence des fichiers HTMLs
+
+V0.3.1
+======
+   - Amélioration du code pour optimisation de la v0.3
+
+V0.3.2
+======
+   - Correction sur l'affichage des titres de pages
+
+V0.4
+====
+   - Mise en place d'une recherche rapide et c'est un vrai progrés ;-).
+
+V0.5
+====
+   - Permettre la mise à jour de la base de référence.
+   - Permettre la configuration de la page de résultat (Script CGI)
+   - Exemple de mise en place de Search4LDP en intranet (CGI)
+_________________________________________________________________ 
+
+Philippe BOUSQUET
+229 rue Sainte Catherine,
+33000 BORDEAUX
+FRANCE.
+Tel: (+33) 06.61.99.25.84 

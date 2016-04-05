@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Recherche pour les HOWTOs en Francais</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#CCFFCC" VLINK="#77CC77">
+<FORM method="POST" action="/perl/search4ldp.pl">
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 COLS=1 WIDTH="100%" STYLE="page-break-before: always" >
+  <TR><TD><H1>Rechercher avec <I>Search4LDP</I></H1></TD></TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH=100% COLS=1>
+  <TR>
+    <TD BGCOLOR="#FF0000">
+      <CENTER><FONT COLOR="#FFFFFF"><B>Rechecher dans la documentation</B></FONT>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+<CENTER><TABLE border valign="center">
+  <TR>
+    <TH>Texte &agrave; rechercher: </TH>
+    <TH><INPUT type=text name="Texte" size=40><BR></TH>
+  </TR>
+  <TR>
+    <TH colspan=2>Methode de recherche: <SELECT name="Operateur">
+                   <OPTION>OU
+                   <OPTION>ET
+                   <OPTION>PHRASE
+                 </SELECT><BR></TH>
+  </TR>
+  <TR>
+    <TH colspan=2>
+      <INPUT type=hidden name="Rapide" value="Oui" size=0>
+      <INPUT type=hidden name="Base" value="/var/www/html/HOWTO" size=0>
+      <INPUT type=hidden name="AliasSrc" value="/var/www/html" size=0>
+      <INPUT type=hidden name="AliasDest" value="" size=0>
+      <INPUT type=hidden name="Titre" value="Search4LDP" size=0>
+      <INPUT type=hidden name="Link" value="#AA55AA" size=0>
+      <INPUT type=hidden name="VLink" value="#CC77CC" size=0>
+      <INPUT type=hidden name="ClBack" value="#FFFFFF" size=0>
+      <INPUT type=hidden name="ClText" value="#000000" size=0>
+      <INPUT type=hidden name="ClBaniere" value="#FF0000" size=0>
+      <INPUT type=hidden name="ClBText" value="#FFFFFF" size=0>
+      <INPUT type=hidden name="NbMax" value=0 size=0>
+    </TH>
+  </TR>
+  <TR>
+    <TH colspan=2>
+      <INPUT type=submit value="Rechercher!">
+      <INPUT type=reset>
+      <BR>
+    </TH>
+  </TR>
+</TABLE></CENTER>
+<BR>
+</FORM>
+</BODY>
+</HTML>

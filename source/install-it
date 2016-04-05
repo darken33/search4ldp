@@ -1,0 +1,71 @@
+#! /bin/sh
+
+# Installation de Search4LDP
+#--------------------
+# Par Philippe BOUSQUET
+# Copyright (c) 2001 - Philippe BOUSQUET
+# Sous License: GENERAL PUBLIC LICENSE
+prefix=/usr/local
+navigateur=mozilla
+
+# Titre
+echo "Installation de Search4LDP"
+echo "Par Philippe BOUSQUET"
+echo "Copyright (c) 2001 - Philippe BOUSQUET"
+echo "Sous License: GENERAL PUBLIC LICENSE"
+echo ""
+
+# Verification du user
+[[ $USER != "root" ]] &&
+{
+  echo "Err01: Vous devez etre root pour Installer Search4LDP"
+  exit
+}
+
+# Suppression des anciennes versions
+echo "* Suppression des anciennes versions"
+[[ ! -d $prefix/share ]] && mkdir -rf $prefix/share 2>/dev/null
+rm -rf $prefix/share/search4ldp 2>/dev/null
+rm -f $prefix/bin/search4ldp.pl
+rm -f $prefix/bin/findhtml.pl
+rm -f $prefix/bin/search4ldp.plx
+echo ""
+
+# Installation de Search4LDP
+echo "* Installation de Search4LDP"
+mkdir $prefix/share/search4ldp
+cp *.jpg $prefix/share/search4ldp/
+cp COPYING $prefix/share/search4ldp/
+cp README $prefix/share/search4ldp/
+cp NEWS $prefix/share/search4ldp/
+cp TODO $prefix/share/search4ldp/
+cp BUGS $prefix/share/search4ldp/
+cp PROJETS $prefix/share/search4ldp/
+cp ./search4ldp.pl $prefix/bin/search4ldp.pl
+cp ./findhtml.pl $prefix/bin/findhtml.pl
+chmod 755 $prefix/bin/search4ldp.pl
+chmod 755 $prefix/bin/findhtml.pl
+echo ""
+
+# Installation de Howto
+echo "* Installation de Howto"
+cd Howto
+echo "   - configure"
+./configure --prefix=$prefix >/dev/null
+echo "// param.h" > ./src/param.h
+echo "// parametrage de Howto" >> ./src/param.h
+echo "" >> ./src/param.h
+echo "#define PREFIX \"$prefix\";" >> ./src/param.h
+echo "#define NAVIGATEUR \"$navigateur\";" >> ./src/param.h
+echo "   - compilation"
+make >/dev/null
+echo "   - installation"
+make install >/dev/null
+echo ""
+
+# Fin d'installation
+echo "Installation terminée..."
+echo ""
+echo "Tapez 'howto' pour lancer le logiciel..."
+
+
